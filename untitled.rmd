@@ -8,15 +8,24 @@ nfl1819 <- read_csv("https://raw.githubusercontent.com/pwood43/ezczproject/maste
 nfl1920 <- read_csv("https://raw.githubusercontent.com/pwood43/ezczproject/master/nfl%20odds%202019-20.csv")
 library(tidyverse)
 library(dplyr)
-nfl1617 %>% select(Date:Team, Final:Total_Move)
-nfl1718 %>% select(Date:Close)
-nfl1819 %>% select(Date:Close)
-nfl1920 %>% select(Date:Close)
-nfl1617 %>% arrange(Team)
 nfl1819 %>% select(Date:Close)
 nfl1617 <- read_csv("https://raw.githubusercontent.com/pwood43/ezczproject/master/nfl%20odds%202016-17.csv")
 nfl1617 %>% select(Date:Team, Final:Close)
 nfl1920 <- nfl1920 %>% na.omit()
 
 nfl1617 <- read_csv("https://raw.githubusercontent.com/pwood43/ezczproject/master/nfl%20odds%202016-17.csv")
+
+mean(nfl1617$Line_Move)
+mean(nfl1617$Total_Move)
+
+mean(nfl1920$Line_Move)
+mean(nfl1920$Total_Move)
+
+mean(Packers1920$Total_Move)
+mean(Packers1920$Line_Move)
+
+nfl1617 %>% select(Date:Team, Final:Total_Move)
+nfl1920 %>% select(Date:Team, Final:Total_Move)
+
+Packers1920 <- read_csv("https://raw.githubusercontent.com/pwood43/ezczproject/master/Packers_19_20.csv")
 ```
